@@ -13,16 +13,16 @@
 @font-face {
     font-family: 'Yekan';
     src: url('../fonts/yekan.woff') format('woff'),
-         url('../fonts/yekan.ttf') format('truetype');
-  }
+    url('../fonts/yekan.ttf') format('truetype');
+}
 
 h5 {
     font-family: 'Yekan', sans-serif;
-  }
+}
 
 small {
     font-family: 'Yekan', sans-serif;
-}  
+}
 
 .fw-medium {
     font-weight: 600 !important;
@@ -157,7 +157,7 @@ small {
         z-index: 999;
         background: transparent !important;
     }
-    
+
     .sticky-top.navbar-dark {
         position: fixed;
         background: var(--dark) !important;
@@ -173,11 +173,26 @@ small {
     background-size: cover;
 }
 
+/* Default styles for .hero-header image animation */
 .hero-header img {
     animation: imgRotate 50s linear infinite;
 }
 
-/* @keyframes imgRotate { 
+/* Responsive adjustments for .hero-header and its image on mobile devices */
+@media (max-width: 768px) {
+    .hero-header {
+        /* Adjust the background properties to fit mobile screens */
+        background-position: top center; /* Change the background position to top */
+        background-size: 100% auto; /* Adjust the background size to cover the width and auto height */
+    }
+
+    .hero-header img {
+        /* Remove the animation for the image on mobile devices */
+        animation: none;
+    }
+}
+
+/* @keyframes imgRotate {
     100% { 
         transform: rotate(360deg); 
     } 
@@ -375,8 +390,8 @@ small {
 @font-face {
     font-family: 'Yekan';
     src: url('../fonts/yekan.woff') format('woff'),
-         url('../fonts/yekan.ttf') format('truetype');
-  }
+    url('../fonts/yekan.ttf') format('truetype');
+}
 
 .team-item img {
     transition: .5s;
@@ -499,3 +514,58 @@ small {
     border-right: none;
 }
 
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Adjust font size for smaller screens */
+    h1 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Adjust column layout on small screens */
+    .container-xxl {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .col-sm-6 {
+        max-width: 100%;
+    }
+
+    .col-md-6 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    /* Adjust font size for extra small screens */
+    h1 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Example media query for adjusting the hero section font size on smaller screens */
+@media (max-width: 768px) {
+    .hero-header h1 {
+        font-size: 24px;
+    }
+}
