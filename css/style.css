@@ -166,6 +166,54 @@ small {
 
 
 /*** Hero Header ***/
+@media (max-width: 767px) {
+    /* Adjust styles for mobile devices */
+    .navbar-brand {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 5px;
+    }
+
+    /*.hero-header {*/
+    /*    !* Add your adjusted styles for the hero header on mobile here *!*/
+    /*    background-size: cover; !* Change background-size for better display on mobile *!*/
+    /*    padding: 40px;*/
+    /*}*/
+
+    .hero-header img {
+        max-width: 60%; /* Make the image responsive on mobile */
+    }
+
+    .btn-primary {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Adjust hero content for mobile */
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        max-width: 100%;
+    }
+}
+
 .hero-header {
     background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/1.jpg);
     background-position: center center;
@@ -173,30 +221,28 @@ small {
     background-size: cover;
 }
 
-/* Default styles for .hero-header image animation */
-.hero-header img {
-    animation: imgRotate 50s linear infinite;
+@media (max-width: 767px) {
+    .hero-header {
+        background-size: 100% auto; /* Adjust background size for mobile */
+    }
 }
 
-/* Responsive adjustments for .hero-header and its image on mobile devices */
-@media (max-width: 768px) {
-    .hero-header {
-        /* Adjust the background properties to fit mobile screens */
-        background-position: top center; /* Change the background position to top */
-        background-size: 100% auto; /* Adjust the background size to cover the width and auto height */
+@media (max-width: 767px) {
+    .hero-header .row {
+        flex-direction: column-reverse; /* Stack the columns vertically on mobile */
+    }
+
+    .hero-header .col-lg-6,
+    .hero-header .col-lg-5 {
+        text-align: center; /* Center the text and image on mobile */
     }
 
     .hero-header img {
-        /* Remove the animation for the image on mobile devices */
-        animation: none;
+        max-width: 70%; /* Make sure images don't overflow their containers */
     }
 }
 
-/* @keyframes imgRotate {
-    100% { 
-        transform: rotate(360deg); 
-    } 
-} */
+
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
@@ -266,8 +312,9 @@ small {
 .video {
     position: relative;
     height: 100%;
+    object-fit: cover;
     min-height: 500px;
-    background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(../img/700500.jpg);
+    /*background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(../img/700500.jpg);*/
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -302,6 +349,12 @@ small {
     background: var(--primary);
     border-radius: 50%;
     animation: pulse-border 1500ms ease-out infinite;
+}
+
+.iran-modir-video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .video .btn-play:after {
@@ -558,14 +611,4 @@ small {
     }
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
 
-/* Example media query for adjusting the hero section font size on smaller screens */
-@media (max-width: 768px) {
-    .hero-header h1 {
-        font-size: 24px;
-    }
-}
