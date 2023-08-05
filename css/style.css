@@ -224,6 +224,7 @@ small {
 @media (max-width: 767px) {
     .hero-header {
         background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/mobile-bg.jpg);
+        /*background-size: 100% auto; !* Adjust background size for mobile *!*/
     }
 }
 
