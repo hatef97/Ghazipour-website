@@ -191,7 +191,6 @@ small {
     /*    background-size: cover; !* Change background-size for better display on mobile *!*/
     /*    padding: 40px;*/
     /*}*/
-
     .hero-header img {
         max-width: 60%; /* Make the image responsive on mobile */
     }
@@ -242,7 +241,6 @@ small {
         max-width: 70%; /* Make sure images don't overflow their containers */
     }
 }
-
 
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -391,6 +389,15 @@ small {
     border-top: 22px solid transparent;
     border-bottom: 22px solid transparent;
 }
+
+@media (max-width: 767px) {
+    .iran-modir-video {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
 
 @keyframes pulse-border {
     0% {
